@@ -1,1 +1,1 @@
-# zmk-config
+Sofle\Soufflé ZMK firmware.
