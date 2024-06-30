@@ -13,6 +13,11 @@
     retro-tap;
 };
 
+&sk {
+    quick-release;
+};
+
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -31,9 +36,9 @@
             bindings = <
 &kp GRAVE       &kp F1    &kp F2  &kp F3    &kp F4      &kp F5                                                           &kp F6             &kp F7         &kp F8        &kp F9                &kp F10                &kp F11
 &trans          &kp N1    &kp N2  &kp N3    &kp N4      &kp N5                                                           &kp N6             &kp N7         &kp N8        &kp N9                &kp N0                 &kp F12
-&kp GRAVE       &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                                                      &kp CARET          &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
+&caps_word       &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                                                      &kp CARET          &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
 &sk LEFT_SHIFT  &trans    &trans  &trans    &trans      &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp MINUS      &kp EQUAL     &kp UNDERSCORE        &kp BSLH               &trans
-                          &trans  &trans    &trans      &trans            &trans                  &trans                 &trans             &trans         &trans        &kp PRINTSCREEN
+                          &trans  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_COMMAND  &sk SPACE                  &trans                 &trans             &trans         &trans        &kp PRINTSCREEN
             >;
         };
 
