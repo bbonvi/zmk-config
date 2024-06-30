@@ -13,7 +13,11 @@
     retro-tap;
 };
 
-&sk { quick-release; };
+&sk {
+    quick-release;
+    release-after-ms = <2000>;
+    lazy;
+};
 
 / {
     keymap {
