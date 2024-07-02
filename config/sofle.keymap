@@ -26,9 +26,16 @@
         command_space {
             bindings = <&kp LG(SPACE)>;
             key-positions = <28 27>;
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             layers = <0>;
             require-prior-idle-ms = <30>;
+        };
+
+        caps_word {
+            bindings = <&caps_word>;
+            key-positions = <31 32>;
+            require-prior-idle-ms = <10>;
+            timeout-ms = <30>;
         };
     };
 
