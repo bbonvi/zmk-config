@@ -43,6 +43,18 @@
             key-positions = <33 32 31>;
             timeout-ms = <50>;
         };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <21 20>;
+            timeout-ms = <45>;
+            require-prior-idle-ms = <30>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <45 46>;
+        };
     };
 
     macros {
