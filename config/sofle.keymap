@@ -26,7 +26,7 @@
         command_space {
             bindings = <&kp LG(SPACE)>;
             key-positions = <28 27>;
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             layers = <0>;
             require-prior-idle-ms = <30>;
         };
@@ -35,7 +35,7 @@
             bindings = <&sk LEFT_SHIFT>;
             key-positions = <31 32>;
             require-prior-idle-ms = <30>;
-            timeout-ms = <30>;
+            timeout-ms = <40>;
         };
     };
 
