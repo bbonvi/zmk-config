@@ -28,13 +28,13 @@
             key-positions = <28 27>;
             timeout-ms = <30>;
             layers = <0>;
-            require-prior-idle-ms = <40>;
+            require-prior-idle-ms = <50>;
         };
 
         sticky_shift {
             bindings = <&sk LEFT_SHIFT>;
             key-positions = <31 32>;
-            require-prior-idle-ms = <40>;
+            require-prior-idle-ms = <50>;
             timeout-ms = <30>;
         };
 
@@ -42,33 +42,35 @@
             bindings = <&caps_word>;
             key-positions = <33 32 31>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <40>;
+            require-prior-idle-ms = <50>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <20 19>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <40>;
+            require-prior-idle-ms = <50>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <45 46>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <40>;
+            require-prior-idle-ms = <50>;
         };
 
         alt_bracket_l {
             bindings = <&kp LA(LEFT_BRACKET)>;
             key-positions = <26 27>;
             timeout-ms = <20>;
+            require-prior-idle-ms = <50>;
         };
 
         alt_bracket_r {
             bindings = <&kp LA(RIGHT_BRACKET)>;
             key-positions = <32 33>;
             timeout-ms = <20>;
+            require-prior-idle-ms = <50>;
         };
     };
 
@@ -86,11 +88,11 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE      &kp N1  &kp N2         &kp N3            &kp N4        &kp N5                                                   &kp N6  &kp N7           &kp N8     &kp N9         &kp N0    &kp MINUS
-&kp TAB         &kp Q   &kp W          &kp E             &kp R         &kp T                                                    &kp Y   &kp U            &kp I      &kp O          &kp P     &kp LBKT
-&lt 3 ESC       &kp A   &kp S          &kp D             &kp F         &kp G                                                    &kp H   &kp J            &kp K      &kp L          &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z   &kp X          &kp C             &kp V         &kp B     &kp LA(LEFT_BRACKET)    &kp LA(RIGHT_BRACKET)  &kp N   &kp M            &kp COMMA  &kp DOT        &kp FSLH  &trans
-                        &kp LC(SPACE)  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LGUI  &kp SPACE               &mo 1                  &mo 2   &kp RIGHT_SHIFT  &kp LCTRL  &kp LG(SPACE)
+&kp ESCAPE      &kp N1  &kp N2            &kp N3            &kp N4        &kp N5                         &kp N6  &kp N7             &kp N8     &kp N9         &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W             &kp E             &kp R         &kp T                          &kp Y   &kp U              &kp I      &kp O          &kp P     &kp LBKT
+&lt 3 ESC       &kp A   &kp S             &kp D             &kp F         &kp G                          &kp H   &kp J              &kp K      &kp L          &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z   &kp X             &kp C             &kp V         &kp B     &trans       &trans  &kp N   &kp M              &kp COMMA  &kp DOT        &kp FSLH  &trans
+                        &kp LEFT_CONTROL  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LGUI  &kp SPACE    &mo 1   &mo 2   &kp RIGHT_CONTROL  &kp LCTRL  &kp LG(SPACE)
             >;
         };
 
