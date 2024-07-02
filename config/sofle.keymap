@@ -72,6 +72,13 @@
             timeout-ms = <20>;
             require-prior-idle-ms = <50>;
         };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <26 27 28>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+        };
     };
 
     macros {
