@@ -31,10 +31,10 @@
             require-prior-idle-ms = <30>;
         };
 
-        caps_word {
-            bindings = <&caps_word>;
+        sticky_shift {
+            bindings = <&sk LEFT_SHIFT>;
             key-positions = <31 32>;
-            require-prior-idle-ms = <10>;
+            require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
     };
