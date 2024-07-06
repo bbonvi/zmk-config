@@ -62,14 +62,14 @@
         alt_bracket_l {
             bindings = <&kp LA(LEFT_BRACKET)>;
             key-positions = <26 27>;
-            timeout-ms = <35>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <40>;
         };
 
         alt_bracket_r {
             bindings = <&kp LA(RIGHT_BRACKET)>;
             key-positions = <32 33>;
-            timeout-ms = <35>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <40>;
         };
 
