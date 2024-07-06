@@ -126,11 +126,11 @@
 
         gaming_layer {
             bindings = <
-&trans          &trans  &trans  &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans  &trans  &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans  &trans
-&lt 3 CAPSLOCK  &trans  &trans  &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans  &trans  &trans  &trans  &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &kp SPACE  &kp LGUI    &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans    &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans    &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&lt 3 CAPSLOCK  &trans  &trans    &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans    &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &kp LGUI  &trans  &trans  &kp SPACE  &kp SPACE    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
