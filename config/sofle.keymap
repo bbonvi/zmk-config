@@ -93,8 +93,8 @@
                 <&kp LC(SPACE)>;
 
             label = "LAYOUT_MACRO";
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <15>;
+            tap-ms = <15>;
         };
 
         layout_layer_macro: layout_layer_macro {
@@ -102,19 +102,15 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LC(SPACE)>,
-                <&macro_press>,
-                <&mo 1>,
-                <&macro_wait_time 100>,
+                <&kp LC(SPACE) &sl 1>,
+                <&macro_wait_time 300>,
                 <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 1>,
                 <&macro_tap>,
                 <&kp LC(SPACE)>;
 
             label = "LAYOUT_LAYER_MACRO";
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <15>;
+            tap-ms = <15>;
         };
     };
 
