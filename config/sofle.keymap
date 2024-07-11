@@ -123,13 +123,6 @@
             bindings = <&layout_macro>, <&layout_layer_macro>;
         };
 
-        sticky_alt2: sticky_alt2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "STICKY_ALT2";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_ALT>, <&kp LEFT_ALT>;
-        };
-
         sticky_alt: sticky_alt {
             compatible = "zmk,behavior-hold-tap";
             label = "STICKY_ALT";
