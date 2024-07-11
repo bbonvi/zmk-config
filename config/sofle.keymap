@@ -175,8 +175,8 @@
         upper_layer {
             bindings = <
 &trans  &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                        &kp F6    &kp F7         &kp F8  &kp F9         &kp F10     &kp F11
-&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &mkp LCLK        &mkp RCLK                     &kp HOME  &kp PG_UP      &trans  &kp BACKSPACE  &kp DELETE  &kp F12
-&trans  &kp KP_NUMBER_4  &kp KP_N5        &kp KP_NUMBER_6  &mkp MCLK        &tog 4                        &kp LEFT  &kp DOWN       &kp UP  &kp RIGHT      &kp ENTER   &trans
+&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &mkp MCLK        &mkp RCLK                     &kp HOME  &kp PG_UP      &trans  &kp BACKSPACE  &kp DELETE  &kp F12
+&trans  &kp KP_NUMBER_4  &kp KP_N5        &kp KP_NUMBER_6  &mkp LCLK        &tog 4                        &kp LEFT  &kp DOWN       &kp UP  &kp RIGHT      &kp ENTER   &trans
 &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &kp KP_NUM  &trans    &trans  &kp END   &kp PAGE_DOWN  &trans  &trans         &trans      &trans
                          &trans           &trans           &trans           &trans      &trans    &trans  &trans    &trans         &trans  &trans
             >;
