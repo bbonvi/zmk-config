@@ -13,10 +13,7 @@
     retro-tap;
 };
 
-&sk {
-    quick-release;
-    release-after-ms = <2000>;
-};
+&sk { quick-release; };
 
 / {
     combos {
@@ -92,8 +89,8 @@
                 <&kp LC(SPACE)>;
 
             label = "LAYOUT_MACRO";
-            wait-ms = <15>;
-            tap-ms = <15>;
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
 
         layout_layer_macro: layout_layer_macro {
@@ -108,8 +105,8 @@
                 <&kp LC(SPACE)>;
 
             label = "LAYOUT_LAYER_MACRO";
-            wait-ms = <15>;
-            tap-ms = <15>;
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
     };
 
