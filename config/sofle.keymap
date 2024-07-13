@@ -164,20 +164,20 @@
 
         raise_layer {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL                    &trans     &trans                &trans            &trans                &trans         &bt BT_CLR
-&trans        &trans        &kp N7        &kp N8        &kp N9        &trans                            &kp PG_UP  &kp C_VOLUME_DOWN     &kp K_MUTE        &kp C_VOLUME_UP       &kp N0         &trans
-&trans        &kp NUMBER_0  &kp N4        &kp N5        &kp N6        &kp N0                            &kp PG_DN  &kp C_PREVIOUS        &kp C_PLAY_PAUSE  &kp C_NEXT            &kp COLON      &kp PIPE
-&trans        &trans        &kp N1        &kp N2        &kp N3        &trans          &trans    &trans  &trans     &kp C_BRIGHTNESS_DEC  &sk RIGHT_SHIFT   &kp C_BRIGHTNESS_INC  &kp BACKSLASH  &trans
-                            &trans        &trans        &trans        &trans          &trans    &trans  &trans     &trans                &trans            &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL                    &trans                &trans             &trans            &trans           &trans  &bt BT_CLR
+&trans        &trans        &kp N7        &kp N8        &kp N9        &trans                            &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp K_MUTE        &kp C_VOLUME_UP  &trans  &trans
+&trans        &kp NUMBER_0  &kp N4        &kp N5        &kp N6        &trans                            &kp C_BRIGHTNESS_DEC  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &trans  &trans
+&trans        &trans        &kp N1        &kp N2        &kp N3        &trans          &trans    &trans  &trans                &trans             &trans            &trans           &trans  &trans
+                            &trans        &trans        &trans        &trans          &trans    &trans  &trans                &trans             &trans            &trans
             >;
         };
 
         upper_layer {
             bindings = <
 &trans  &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                        &kp F6    &kp F7         &kp F8  &kp F9         &kp F10     &kp F11
-&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &mkp MCLK        &mkp RCLK                     &kp HOME  &kp PG_UP      &trans  &kp BACKSPACE  &kp DELETE  &kp F12
-&trans  &kp KP_NUMBER_4  &kp KP_N5        &kp KP_NUMBER_6  &mkp LCLK        &tog 4                        &kp LEFT  &kp DOWN       &kp UP  &kp RIGHT      &kp ENTER   &trans
-&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &kp KP_NUM  &trans    &trans  &kp END   &kp PAGE_DOWN  &trans  &trans         &trans      &trans
+&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &tog 4                        &kp HOME  &kp PG_UP      &trans  &kp BACKSPACE  &kp DELETE  &kp F12
+&trans  &kp KP_NUMBER_4  &kp KP_N5        &kp KP_NUMBER_6  &mkp LCLK        &mkp RCLK                     &kp LEFT  &kp DOWN       &kp UP  &kp RIGHT      &kp ENTER   &trans
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &mkp MCLK        &kp KP_NUM  &trans    &trans  &kp END   &kp PAGE_DOWN  &trans  &trans         &trans      &trans
                          &trans           &trans           &trans           &trans      &trans    &trans  &trans    &trans         &trans  &trans
             >;
         };
