@@ -76,6 +76,13 @@
             timeout-ms = <35>;
             require-prior-idle-ms = <40>;
         };
+
+        alt_backspace {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <20 19 21>;
+            timeout-ms = <45>;
+            require-prior-idle-ms = <40>;
+        };
     };
 
     macros {
