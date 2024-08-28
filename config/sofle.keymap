@@ -173,7 +173,7 @@
 &kp TAB         &kp Q   &kp W             &kp E             &kp R         &kp T                                               &kp Y   &kp U        &kp I      &kp O          &kp P     &kp LBKT
 &lt 3 ESC       &kp A   &kp S             &kp D             &kp F         &kp G                                               &kp H   &kp J        &kp K      &kp L          &kp SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z   &kp X             &kp C             &kp V         &kp B         &layout_macro    &layout_layer_macro  &kp N   &kp M        &kp COMMA  &kp DOT        &kp FSLH  &trans
-                        &kp LEFT_CONTROL  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI  &kp SPACE        &sl 1                &sl 2   &lt 3 RCTRL  &kp LCTRL  &kp LG(SPACE)
+                        &kp LEFT_CONTROL  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI  &kp SPACE        &mo 1                &mo 2   &lt 3 RCTRL  &kp LCTRL  &kp LG(SPACE)
             >;
         };
 
