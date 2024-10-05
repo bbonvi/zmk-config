@@ -106,7 +106,7 @@
 
         gaming_layer_set {
             bindings = <&to 4>;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
             timeout-ms = <35>;
             require-prior-idle-ms = <40>;
             layers = <0 4>;
@@ -114,7 +114,7 @@
 
         default_layer_set {
             bindings = <&to 0>;
-            key-positions = <2 3>;
+            key-positions = <2 1>;
             timeout-ms = <35>;
             require-prior-idle-ms = <40>;
             layers = <0 4>;
