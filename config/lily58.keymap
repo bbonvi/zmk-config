@@ -107,16 +107,16 @@
         key_p {
             bindings = <&kp P>;
             key-positions = <20 21>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <45>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <40>;
             layers = <0>;
         };
 
         key_t {
             bindings = <&kp T>;
             key-positions = <16 15>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <40>;
             layers = <0>;
         };
     };
