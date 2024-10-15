@@ -204,21 +204,21 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE      &kp N1  &kp N2  &kp N3                                   &kp N4                           &kp N5                                                             &kp N6  &kp N7       &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB         &kp Q   &kp W   &kp E                                    &kp R                            &kp T                                                              &kp Y   &kp U        &kp I      &kp O    &kp P     &kp LBKT
-&lt 3 ESC       &kp A   &kp S   &kp D                                    &kp F                            &kp G                                                              &kp H   &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z   &kp X   &kp C                                    &kp V                            &kp B      &layout_macro                      &layout_layer_macro  &kp N   &kp M        &kp COMMA  &kp DOT  &kp FSLH  &trans
-                                &hold_tap_mod LEFT_CONTROL LEFT_CONTROL  &hold_tap_mod LEFT_ALT LEFT_ALT  &kp SPACE  &hold_tap_mod LEFT_GUI LEFT_GUI    &mo 1                &mo 2   &lt 3 RCTRL  &kp LCTRL
+&kp ESCAPE      &kp N1  &kp N2  &kp N3                                   &kp N4                           &kp N5                                                &kp N6  &kp N7       &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W   &kp E                                    &kp R                            &kp T                                                 &kp Y   &kp U        &kp I      &kp O    &kp P     &kp LBKT
+&lt 3 ESC       &kp A   &kp S   &kp D                                    &kp F                            &kp G                                                 &kp H   &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C                                    &kp V                            &kp B      &trans                             &trans  &kp N   &kp M        &kp COMMA  &kp DOT  &kp FSLH  &trans
+                                &hold_tap_mod LEFT_CONTROL LEFT_CONTROL  &hold_tap_mod LEFT_ALT LEFT_ALT  &kp SPACE  &hold_tap_mod LEFT_GUI LEFT_GUI    &mo 1   &mo 2   &lt 3 RCTRL  &kp LCTRL
             >;
         };
 
         lower_layer {
             bindings = <
-&kp GRAVE       &kp F1           &kp F2         &kp F3            &kp F4             &kp F5                           &kp F6         &kp F7          &kp F8                &kp F9                 &kp F10       &kp F11
-&trans          &kp SQT          &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp DOT                          &kp AMPERSAND  &kp UNDERSCORE  &kp LBKT              &kp RBKT               &kp PERCENT   &kp F12
-&trans          &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL          &kp HASH                         &kp PIPE       &kp COLON       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &kp PIPE
-&sk LEFT_SHIFT  &kp CARET        &kp FSLH       &kp ASTERISK      &kp BSLH           &trans         &trans    &trans  &kp GRAVE      &kp DOLLAR      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &trans
-                                                &trans            &trans             &layout_macro  &trans    &trans  &trans         &trans          &trans
+&kp GRAVE       &kp F1           &kp F2         &kp F3            &kp F4             &kp F5                             &kp F6         &kp F7          &kp F8                &kp F9                 &kp F10       &kp F11
+&trans          &kp SQT          &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp DOT                            &kp AMPERSAND  &kp UNDERSCORE  &kp LBKT              &kp RBKT               &kp PERCENT   &kp F12
+&trans          &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL          &kp HASH                           &kp PIPE       &kp COLON       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &kp PIPE
+&sk LEFT_SHIFT  &kp CARET        &kp FSLH       &kp ASTERISK      &kp BSLH           &trans    &trans           &trans  &kp GRAVE      &kp DOLLAR      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &trans
+                                                &trans            &trans             &trans    &layout_macro    &trans  &trans         &trans          &trans
             >;
         };
 
