@@ -46,7 +46,7 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <20 19>;
-            timeout-ms = <30>;
+            timeout-ms = <35>;
             require-prior-idle-ms = <55>;
         };
 
