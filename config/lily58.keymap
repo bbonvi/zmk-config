@@ -362,7 +362,7 @@
             bindings = <
 &trans          &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans  &trans  &trans     &trans
 &trans          &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans  &trans  &trans     &trans
-&lt 5 CAPSLOCK  &kp A   &trans  &trans     &trans        &trans                                 &trans  &trans  &trans  &trans  &trans     &trans
+&lt 4 CAPSLOCK  &kp A   &trans  &trans     &trans        &trans                                 &trans  &trans  &trans  &trans  &trans     &trans
 &kp LEFT_SHIFT  &kp Z   &trans  &trans     &trans        &trans     &trans              &trans  &trans  &trans  &trans  &trans  &kp SLASH  &trans
                                 &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp LEFT_COMMAND    &trans  &trans  &trans  &trans
             >;
