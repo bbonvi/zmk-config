@@ -134,7 +134,7 @@
         };
 
         caps_layer {
-            bindings = <&mo 5>;
+            bindings = <&mo 4>;
             key-positions = <26 25>;
             timeout-ms = <40>;
             require-prior-idle-ms = <50>;
