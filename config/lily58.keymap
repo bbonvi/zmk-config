@@ -182,38 +182,6 @@
     };
 
     behaviors {
-        td_t: td_t {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_T";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp R>, <&kp T>;
-        };
-
-        td_b: td_b {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_B";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp V>, <&kp B>;
-        };
-
-        td_y: td_y {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_Y";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp U>, <&kp Y>;
-        };
-
-        td_n: td_n {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp M>, <&kp N>;
-        };
-
         hold_tap_mod_sticky: hold_tap_mod_sticky {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_MOD_STICKY";
@@ -270,7 +238,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <130>;
             flavor = "tap-preferred";
         };
     };
