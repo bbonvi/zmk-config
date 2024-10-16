@@ -217,7 +217,7 @@
         homerow_mod_left: homerow_mod_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MOD_LEFT";
-            bindings = <&kp>, <&sk>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <120>;
@@ -228,7 +228,7 @@
         homerow_mod_right: homerow_mod_right {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MOD_RIGHT";
-            bindings = <&kp>, <&sk>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <120>;
@@ -239,7 +239,7 @@
         homerow_mod_caps: homerow_mod_caps {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MOD_CAPS";
-            bindings = <&lt>, <&sk>;
+            bindings = <&lt>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <120>;
