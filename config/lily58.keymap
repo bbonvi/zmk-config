@@ -139,12 +139,28 @@
             layers = <0 1 2 3>;
         };
 
-        cmd {
+        cmd__DISABLED {
             bindings = <&sk LEFT_GUI>;
-            key-positions = <39 40>;
+            key-positions = <43 42>;
             timeout-ms = <30>;
             require-prior-idle-ms = <40>;
             layers = <0 1 2 3>;
+        };
+
+        key_p2 {
+            bindings = <&kp P>;
+            key-positions = <33 34>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <40>;
+            layers = <0>;
+        };
+
+        key_q {
+            bindings = <&kp Q>;
+            key-positions = <14 25>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <40>;
+            layers = <0>;
         };
     };
 
