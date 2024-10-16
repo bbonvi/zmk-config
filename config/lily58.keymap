@@ -180,6 +180,14 @@
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
+
+        noop3 {
+            bindings = <&mo 5>;
+            key-positions = <32 33 34 25 26 27>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
     };
 
     macros {
