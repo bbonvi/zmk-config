@@ -165,7 +165,15 @@
 
         noop {
             bindings = <&none>;
-            key-positions = <28 27 26 25 31 32 33 34>;
+            key-positions = <28 27 26 25>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <40>;
+            layers = <0>;
+        };
+
+        noop2 {
+            bindings = <&none>;
+            key-positions = <31 32 33 34>;
             timeout-ms = <40>;
             require-prior-idle-ms = <40>;
             layers = <0>;
