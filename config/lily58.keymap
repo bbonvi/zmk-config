@@ -232,7 +232,8 @@
             flavor = "hold-preferred";
             retro-tap;
             hold-while-undecided;
-            hold-while-undecided-linger;
+            hold-trigger-key-positions = <18 19 20 21 22 30 31 32 33 34 44 45 46 47 48>;
+            hold-trigger-on-release;
         };
 
         homerow_mod_right: homerow_mod_right {
@@ -245,7 +246,6 @@
             flavor = "hold-preferred";
             retro-tap;
             hold-while-undecided;
-            hold-while-undecided-linger;
         };
 
         homerow_mod_caps: homerow_mod_caps {
