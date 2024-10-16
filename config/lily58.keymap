@@ -50,7 +50,7 @@
             key-positions = <20 19>;
             timeout-ms = <35>;
             require-prior-idle-ms = <55>;
-            layers = <0 5 1 2 5 4>;
+            layers = <0 5 1 2 5 4 3>;
         };
 
         enter {
@@ -58,7 +58,7 @@
             key-positions = <45 46>;
             timeout-ms = <30>;
             require-prior-idle-ms = <50>;
-            layers = <0 5 4>;
+            layers = <0 5 4 3>;
         };
 
         alt_bracket_r {
