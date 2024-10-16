@@ -223,8 +223,6 @@
             tapping-term-ms = <120>;
             flavor = "hold-preferred";
             retro-tap;
-            hold-while-undecided;
-            hold-while-undecided-linger;
         };
 
         homerow_mod_right: homerow_mod_right {
@@ -235,8 +233,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <120>;
             flavor = "hold-preferred";
-            hold-while-undecided;
-            hold-while-undecided-linger;
             retro-tap;
         };
 
