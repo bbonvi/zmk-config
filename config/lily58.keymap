@@ -135,6 +135,14 @@
             require-prior-idle-ms = <40>;
             layers = <0 1 2 3>;
         };
+
+        cmd {
+            bindings = <&sk LEFT_GUI>;
+            key-positions = <39 40>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <40>;
+            layers = <0 1 2 3>;
+        };
     };
 
     macros {
@@ -223,6 +231,8 @@
             tapping-term-ms = <120>;
             flavor = "hold-preferred";
             retro-tap;
+            hold-while-undecided;
+            hold-while-undecided-linger;
         };
 
         homerow_mod_right: homerow_mod_right {
@@ -234,6 +244,8 @@
             tapping-term-ms = <120>;
             flavor = "hold-preferred";
             retro-tap;
+            hold-while-undecided;
+            hold-while-undecided-linger;
         };
 
         homerow_mod_caps: homerow_mod_caps {
