@@ -162,6 +162,14 @@
             require-prior-idle-ms = <40>;
             layers = <0>;
         };
+
+        noop {
+            bindings = <&none>;
+            key-positions = <28 27 26 25 31 32 33 34>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <40>;
+            layers = <0>;
+        };
     };
 
     macros {
