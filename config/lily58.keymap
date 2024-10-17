@@ -219,7 +219,7 @@
         nav_layer {
             bindings = <&sl 3>;
             key-positions = <52 55>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             require-prior-idle-ms = <45>;
             layers = <0>;
         };
