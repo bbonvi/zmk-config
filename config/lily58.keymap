@@ -117,7 +117,7 @@
             key-positions = <20 21>;
             timeout-ms = <40>;
             require-prior-idle-ms = <40>;
-            layers = <0 5>;
+            layers = <0 5 3>;
         };
 
         key_t {
@@ -125,7 +125,7 @@
             key-positions = <16 15>;
             timeout-ms = <40>;
             require-prior-idle-ms = <40>;
-            layers = <0 5>;
+            layers = <0 5 3>;
         };
 
         tab {
