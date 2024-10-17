@@ -223,6 +223,22 @@
             require-prior-idle-ms = <45>;
             layers = <0>;
         };
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <38 39>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <60>;
+            layers = <0>;
+        };
+
+        paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <39 40>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <60>;
+            layers = <0>;
+        };
     };
 
     macros {
