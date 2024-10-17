@@ -355,11 +355,11 @@
 
         nav_layer {
             bindings = <
-&trans  &trans          &trans     &trans           &trans        &trans                    &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans          &kp LC(E)  &kp LC(LS(TAB))  &kp LC(TAB)   &trans                    &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &sk LEFT_SHIFT  &sk LCTRL  &sk LEFT_ALT     &sk LEFT_GUI  &trans                    &trans  &kp LC(D)  &kp LC(U)  &trans  &trans  &trans
-&trans  &kp Z           &kp LG(X)  &kp LG(C)        &kp LG(V)     &trans  &trans    &trans  &trans  &trans     &trans     &trans  &trans  &trans
-                                   &trans           &trans        &trans  &trans    &trans  &trans  &trans     &trans
+&trans  &trans          &trans     &trans        &trans        &trans                    &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans          &trans     &trans        &trans        &trans                    &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &sk LEFT_SHIFT  &sk LCTRL  &sk LEFT_ALT  &sk LEFT_GUI  &trans                    &trans  &kp LC(D)  &kp LC(U)  &trans  &trans  &trans
+&trans  &trans          &trans     &trans        &trans        &trans  &trans    &trans  &trans  &trans     &trans     &trans  &trans  &trans
+                                   &trans        &trans        &trans  &trans    &trans  &trans  &trans     &trans
             >;
         };
 
