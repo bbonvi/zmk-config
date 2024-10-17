@@ -136,14 +136,6 @@
             layers = <0>;
         };
 
-        caps_layer {
-            bindings = <&mo 4>;
-            key-positions = <26 25>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <50>;
-            layers = <0>;
-        };
-
         cmd__DISABLED {
             bindings = <&sk LEFT_GUI>;
             key-positions = <43 42>;
@@ -235,6 +227,14 @@
         paste {
             bindings = <&kp LG(V)>;
             key-positions = <39 40>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <60>;
+            layers = <0>;
+        };
+
+        select_all {
+            bindings = <&kp LG(A)>;
+            key-positions = <25 26>;
             timeout-ms = <40>;
             require-prior-idle-ms = <60>;
             layers = <0>;
