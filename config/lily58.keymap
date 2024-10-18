@@ -365,7 +365,7 @@
             flavor = "balanced";
             quick-tap-ms = <175>;
             require-prior-idle-ms = <180>;
-            hold-trigger-key-positions = <18 19 20 21 22 30 31 32 33 34 44 45 46 47 48>;
+            hold-trigger-key-positions = <18 19 20 21 22 30 31 32 33 34 44 45 46 47 48 25>;
             hold-trigger-on-release;
         };
 
@@ -379,7 +379,7 @@
             flavor = "balanced";
             quick-tap-ms = <175>;
             require-prior-idle-ms = <180>;
-            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41>;
+            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41 34>;
             hold-trigger-on-release;
         };
 
@@ -393,7 +393,7 @@
             flavor = "hold-preferred";
             quick-tap-ms = <175>;
             require-prior-idle-ms = <160>;
-            hold-trigger-key-positions = <18 19 20 21 22 30 31 32 33 34 44 45 46 47 48>;
+            hold-trigger-key-positions = <18 19 20 21 22 30 31 32 33 34 44 45 46 47 48 25>;
         };
 
         hmr_raise: hmr_raise {
@@ -406,7 +406,7 @@
             flavor = "hold-preferred";
             quick-tap-ms = <175>;
             require-prior-idle-ms = <160>;
-            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41>;
+            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41 34>;
         };
     };
 
