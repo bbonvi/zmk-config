@@ -68,7 +68,7 @@
             bindings = <&kp LC(SPACE)>;
             key-positions = <32 33>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <60>;
             layers = <0>;
         };
 
