@@ -51,8 +51,8 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <20 19>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <55>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <60>;
             layers = <0 5 1 2 5 4 3>;
         };
 
@@ -83,8 +83,8 @@
         alt_backspace {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <20 19 21>;
-            timeout-ms = <45>;
-            require-prior-idle-ms = <40>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
             layers = <0 1 2 5>;
         };
 
