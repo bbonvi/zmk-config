@@ -75,8 +75,8 @@
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <14 15>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <70>;
             layers = <0 1 2 5>;
         };
 
@@ -224,11 +224,11 @@
             layers = <0>;
         };
 
-        select_all {
-            bindings = <&kp LG(A)>;
+        caps_layer_left {
+            bindings = <&mo 4>;
             key-positions = <25 26>;
             timeout-ms = <40>;
-            require-prior-idle-ms = <60>;
+            require-prior-idle-ms = <70>;
             layers = <0>;
         };
 
@@ -245,6 +245,14 @@
             key-positions = <48 47>;
             timeout-ms = <40>;
             require-prior-idle-ms = <50>;
+            layers = <0>;
+        };
+
+        caps_layer_right {
+            bindings = <&mo 4>;
+            key-positions = <33 34>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <70>;
             layers = <0>;
         };
     };
