@@ -51,7 +51,7 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <20 19>;
-            timeout-ms = <35>;
+            timeout-ms = <40>;
             require-prior-idle-ms = <55>;
             layers = <0 5 1 2 5 4 3>;
         };
