@@ -327,7 +327,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <90>;
+            tapping-term-ms = <130>;
             flavor = "balanced";
             quick-tap-ms = <175>;
             require-prior-idle-ms = <70>;
@@ -341,7 +341,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <90>;
+            tapping-term-ms = <130>;
             flavor = "balanced";
             quick-tap-ms = <175>;
             require-prior-idle-ms = <70>;
@@ -356,7 +356,7 @@
         default_layer {
             bindings = <
 &kp ESCAPE      &kp N1             &kp N2        &kp N3                                          &kp N4                       &kp N5                                            &kp N6  &kp N7            &kp N8                &kp N9          &kp N0                  &kp MINUS
-&kp TAB         &htl 4 Q           &kp W         &kp E                                           &kp R                        &kp T                                             &kp Y   &kp U             &kp I                 &kp O           &htr 4 P                &kp LBKT
+&kp TAB         &htl 7 Q           &kp W         &kp E                                           &kp R                        &kp T                                             &kp Y   &kp U             &kp I                 &kp O           &htr 7 P                &kp LBKT
 &lt 4 ESC       &kp A              &kp S         &kp D                                           &kp F                        &kp G                                             &kp H   &kp J             &kp K                 &kp L           &kp SEMI                &kp SQT
 &kp LEFT_SHIFT  &hml LEFT_SHIFT Z  &hml LCTRL X  &hml LEFT_ALT C                                 &hml LEFT_GUI V              &kp B      &trans                         &trans  &kp N   &hmr RIGHT_GUI M  &hmr RIGHT_ALT COMMA  &hmr RCTRL DOT  &hmr RIGHT_SHIFT SLASH  &trans
                                                  &hold_tap_mod_sticky LEFT_CONTROL LEFT_CONTROL  &hold_tap LEFT_ALT LEFT_ALT  &kp SPACE  &hold_tap LEFT_GUI LEFT_GUI    &mo 1   &mo 2   &lt 4 RCTRL       &kp LCTRL
@@ -420,6 +420,16 @@
 &none  &none  &none  &none  &none  &none                  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
                      &none  &none  &none  &none    &none  &none  &none  &none
+            >;
+        };
+
+        arrow_keys_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans     &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans
             >;
         };
     };
