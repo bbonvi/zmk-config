@@ -396,7 +396,7 @@
         caps_layer {
             bindings = <
 &trans  &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                        &kp F6    &kp F7         &kp F8  &kp F9         &kp F10     &kp F11
-&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &tog 5                        &kp HOME  &kp PG_UP      &trans  &kp BACKSPACE  &kp DELETE  &kp F12
+&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans                        &kp HOME  &kp PG_UP      &trans  &kp BACKSPACE  &kp DELETE  &kp F12
 &trans  &kp KP_NUMBER_4  &kp KP_N5        &kp KP_NUMBER_6  &mkp LCLK        &mkp RCLK                     &kp LEFT  &kp DOWN       &kp UP  &kp RIGHT      &kp ENTER   &trans
 &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &mkp MCLK        &kp KP_NUM  &trans    &trans  &kp END   &kp PAGE_DOWN  &trans  &trans         &trans      &trans
                                           &trans           &trans           &trans      &trans    &trans  &trans    &trans         &trans
@@ -405,10 +405,10 @@
 
         gaming_layer {
             bindings = <
-&trans          &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
-&lt 4 CAPSLOCK  &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &trans  &trans  &trans     &trans        &trans     &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
+&trans          &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
+&lt 4 CAPSLOCK  &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C      &kp V         &trans     &trans              &trans  &trans  &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
                                 &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp LEFT_COMMAND    &trans  &trans  &trans  &trans
             >;
         };
@@ -425,11 +425,11 @@
 
         arrow_keys_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans    &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans    &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans     &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans
+&trans  &trans  &trans    &trans    &trans     &trans                    &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans    &kp UP    &trans     &trans                    &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans                    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans    &trans    &trans     &trans  &trans    &trans  &trans    &trans    &trans  &trans     &trans  &trans
+                          &trans    &trans     &trans  &trans    &trans  &trans    &trans    &trans
             >;
         };
     };
