@@ -53,7 +53,7 @@
             key-positions = <20 19>;
             timeout-ms = <50>;
             require-prior-idle-ms = <60>;
-            layers = <0 5 1 2 5 4 3>;
+            layers = <0 5 1 2 5 3 4>;
         };
 
         enter {
@@ -61,7 +61,7 @@
             key-positions = <45 46>;
             timeout-ms = <30>;
             require-prior-idle-ms = <50>;
-            layers = <0 5 4 3>;
+            layers = <0 5 3 4>;
         };
 
         alt_bracket_r {
@@ -97,7 +97,7 @@
         };
 
         gaming_layer_set {
-            bindings = <&to 5>;
+            bindings = <&to 4>;
             key-positions = <2 3>;
             timeout-ms = <30>;
             require-prior-idle-ms = <150>;
@@ -121,7 +121,7 @@
         };
 
         noop1 {
-            bindings = <&mo 6>;
+            bindings = <&mo 5>;
             key-positions = <27 26 25>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
@@ -129,18 +129,10 @@
         };
 
         noop2 {
-            bindings = <&mo 6>;
+            bindings = <&mo 5>;
             key-positions = <32 33 34>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-
-        nav_layer {
-            bindings = <&sl 3>;
-            key-positions = <52 55>;
-            timeout-ms = <80>;
-            require-prior-idle-ms = <45>;
             layers = <0>;
         };
 
@@ -357,9 +349,9 @@
             bindings = <
 &kp ESCAPE      &kp N1             &kp N2        &kp N3                                          &kp N4                       &kp N5                                            &kp N6  &kp N7            &kp N8                &kp N9          &kp N0                  &kp MINUS
 &kp TAB         &kp Q              &kp W         &kp E                                           &kp R                        &kp T                                             &kp Y   &kp U             &kp I                 &kp O           &kp P                   &kp LBKT
-&lt 4 ESC       &kp A              &kp S         &kp D                                           &kp F                        &kp G                                             &kp H   &kp J             &kp K                 &kp L           &kp SEMI                &kp SQT
+&lt 3 ESC       &kp A              &kp S         &kp D                                           &kp F                        &kp G                                             &kp H   &kp J             &kp K                 &kp L           &kp SEMI                &kp SQT
 &kp LEFT_SHIFT  &hml LEFT_SHIFT Z  &hml LCTRL X  &hml LEFT_ALT C                                 &hml LEFT_GUI V              &kp B      &trans                         &trans  &kp N   &hmr RIGHT_GUI M  &hmr RIGHT_ALT COMMA  &hmr RCTRL DOT  &hmr RIGHT_SHIFT SLASH  &trans
-                                                 &hold_tap_mod_sticky LEFT_CONTROL LEFT_CONTROL  &hold_tap LEFT_ALT LEFT_ALT  &kp SPACE  &hold_tap LEFT_GUI LEFT_GUI    &mo 1   &mo 2   &lt 4 RCTRL       &kp LCTRL
+                                                 &hold_tap_mod_sticky LEFT_CONTROL LEFT_CONTROL  &hold_tap LEFT_ALT LEFT_ALT  &kp SPACE  &hold_tap LEFT_GUI LEFT_GUI    &mo 1   &mo 2   &lt 3 RCTRL       &kp LCTRL
             >;
         };
 
@@ -383,16 +375,6 @@
             >;
         };
 
-        nav_layer {
-            bindings = <
-&trans  &trans          &trans     &trans        &trans        &trans                    &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans          &trans     &trans        &trans        &trans                    &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &sk LEFT_SHIFT  &sk LCTRL  &sk LEFT_ALT  &sk LEFT_GUI  &trans                    &trans  &kp LC(D)  &kp LC(U)  &trans  &trans  &trans
-&trans  &trans          &trans     &trans        &trans        &trans  &trans    &trans  &trans  &trans     &trans     &trans  &trans  &trans
-                                   &trans        &trans        &trans  &trans    &trans  &trans  &trans     &trans
-            >;
-        };
-
         caps_layer {
             bindings = <
 &trans  &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                        &kp F6    &kp F7         &kp F8  &kp F9         &kp F10     &kp F11
@@ -407,7 +389,7 @@
             bindings = <
 &trans          &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
 &trans          &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
-&lt 4 CAPSLOCK  &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
+&lt 3 CAPSLOCK  &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
 &kp LEFT_SHIFT  &kp Z   &kp X   &kp C      &kp V         &trans     &trans              &trans  &trans  &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
                                 &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp LEFT_COMMAND    &trans  &trans  &trans  &trans
             >;
