@@ -59,7 +59,7 @@
             bindings = <&kp ENTER>;
             key-positions = <45 46>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <60>;
+            require-prior-idle-ms = <40>;
         };
 
         escape {
