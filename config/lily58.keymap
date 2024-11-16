@@ -423,11 +423,11 @@
 
         nav_layer {
             bindings = <
-&trans  &trans  &trans  &trans           &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans           &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LS(LC(TAB))  &kp LC(TAB)  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans           &kp LG(TAB)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans           &trans       &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans           &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans           &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LC(TAB)  &kp LC(LS(TAB))  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &kp LG(TAB)      &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans       &trans           &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
