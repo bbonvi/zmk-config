@@ -62,11 +62,11 @@
             require-prior-idle-ms = <40>;
         };
 
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <14 15>;
+        escape_disabled {
+            bindings = <&trans>;
+            key-positions = <14 15 16 17>;
             timeout-ms = <50>;
-            require-prior-idle-ms = <70>;
+            require-prior-idle-ms = <570>;
             layers = <0 1 2 3 6>;
         };
 
@@ -138,7 +138,7 @@
             bindings = <&kp LG(V)>;
             key-positions = <39 40>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <120>;
+            require-prior-idle-ms = <140>;
             layers = <0 3>;
         };
 
