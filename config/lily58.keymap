@@ -10,10 +10,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
-&lt {
-    tapping-term-ms = <80>;
-    retro-tap;
-};
+&lt { tapping-term-ms = <80>; };
 
 &sk { quick-release; };
 
@@ -385,7 +382,7 @@
             bindings = <
 &trans  &kp F1                       &kp F2                  &kp F3                     &kp F4                     &kp F5                        &kp F6    &kp F7                    &kp F8         &kp F9         &kp F10     &kp F11
 &trans  &kp KP_NUMBER_7              &kp KP_NUMBER_8         &kp KP_NUMBER_9            &mkp MCLK                  &trans                        &kp HOME  &kp PG_UP                 &trans         &kp BACKSPACE  &kp DELETE  &kp F12
-&trans  &kp KP_NUMBER_4              &kp KP_N5               &kp KP_NUMBER_6            &mkp LCLK                  &mkp RCLK                     &kp LEFT  &kp DOWN                  &kp UP         &kp RIGHT      &kp ENTER   &trans
+&trans  &kp KP_NUMBER_4              &kp KP_N5               &kp KP_NUMBER_6            &mkp LCLK                  &mkp RCLK                     &kp LEFT  &kp DOWN                  &kp UP         &kp RIGHT      &trans      &trans
 &trans  &hml LEFT_SHIFT KP_NUMBER_1  &hml LCTRL KP_NUMBER_2  &hml LEFT_ALT KP_NUMBER_3  &hml LEFT_GUI KP_NUMBER_0  &kp KP_NUM  &trans    &trans  &kp END   &hmr RIGHT_GUI PAGE_DOWN  &kp RIGHT_ALT  &kp RCTRL      &kp RSHFT   &trans
                                                              &trans                     &trans                     &trans      &trans    &trans  &trans    &trans                    &trans
             >;
