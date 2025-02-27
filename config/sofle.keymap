@@ -4,11 +4,12 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt { tapping-term-ms = <150>; };
 
@@ -354,7 +355,7 @@
 &kp TAB         &kp Q              &kp W         &kp E             &kp R            &kp T                        &kp Y   &kp U             &kp I                 &kp O           &kp P                   &kp LBKT
 &lt 3 ESC       &kp A              &kp S         &kp D             &kp F            &kp G                        &kp H   &kp J             &kp K                 &kp L           &kp SEMI                &kp SQT
 &kp LEFT_SHIFT  &hml LEFT_SHIFT Z  &hml LCTRL X  &hml LEFT_ALT C   &hml LEFT_GUI V  &kp B      &trans    &trans  &kp N   &hmr RIGHT_GUI M  &hmr RIGHT_ALT COMMA  &hmr RCTRL DOT  &hmr RIGHT_SHIFT SLASH  &trans
-                           &none                &kp LEFT_CONTROL  &kp LEFT_ALT     &kp SPACE  &mo 7     &mo 1   &mo 2   &lt 3 RCTRL       &kp LCTRL &none
+                                   &none         &kp LEFT_CONTROL  &kp LEFT_ALT     &kp SPACE  &mo 7     &mo 1   &mo 2   &lt 3 RCTRL       &kp LCTRL             &none
             >;
         };
 
@@ -364,7 +365,7 @@
 &trans          &kp SQT          &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp DOT                            &kp AMPERSAND  &kp UNDERSCORE  &kp LBKT              &kp RBKT               &kp PERCENT   &kp F12
 &trans          &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL          &kp HASH                           &kp PIPE       &kp COLON       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &kp PIPE
 &sk LEFT_SHIFT  &kp CARET        &kp FSLH       &kp ASTERISK      &kp BSLH           &trans    &trans           &trans  &kp GRAVE      &kp DOLLAR      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &trans
-                                    &none       &trans            &trans             &trans    &layout_macro    &trans  &trans         &trans          &trans &none
+                                 &none          &trans            &trans             &trans    &layout_macro    &trans  &trans         &trans          &trans                &none
             >;
         };
 
@@ -374,7 +375,7 @@
 &trans  &trans          &kp N1                &kp N2            &kp N3            &trans                            &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp K_MUTE        &kp C_VOLUME_UP  &trans  &trans
 &trans  &kp NUMBER_0    &kp N4                &kp N5            &kp N6            &trans                            &kp C_BRIGHTNESS_DEC  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &trans  &trans
 &trans  &kp LEFT_SHIFT  &hml LEFT_CONTROL N7  &hml LEFT_ALT N8  &hml LEFT_GUI N9  &trans          &trans    &trans  &trans                &trans             &trans            &trans           &trans  &trans
-                          &none               &trans            &trans            &trans          &trans    &trans  &trans                &trans             &trans &none
+                        &none                 &trans            &trans            &trans          &trans    &trans  &trans                &trans             &trans            &none
             >;
         };
 
@@ -384,7 +385,7 @@
 &trans  &kp KP_NUMBER_7              &kp KP_NUMBER_8         &kp KP_NUMBER_9            &mkp MCLK                  &trans                        &kp HOME  &kp PG_UP                 &trans         &kp BACKSPACE  &kp DELETE  &kp F12
 &trans  &kp KP_NUMBER_4              &kp KP_N5               &kp KP_NUMBER_6            &mkp LCLK                  &mkp RCLK                     &kp LEFT  &kp DOWN                  &kp UP         &kp RIGHT      &trans      &trans
 &trans  &hml LEFT_SHIFT KP_NUMBER_1  &hml LCTRL KP_NUMBER_2  &hml LEFT_ALT KP_NUMBER_3  &hml LEFT_GUI KP_NUMBER_0  &kp KP_NUM  &trans    &trans  &kp END   &hmr RIGHT_GUI PAGE_DOWN  &kp RIGHT_ALT  &kp RCTRL      &kp RSHFT   &trans
-                                                 &none      &trans                     &trans                     &trans      &trans    &trans  &trans    &trans                    &trans &none
+                                     &none                   &trans                     &trans                     &trans      &trans    &trans  &trans    &trans                    &trans         &none
             >;
         };
 
@@ -394,7 +395,7 @@
 &trans          &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
 &lt 3 CAPSLOCK  &trans  &trans  &trans     &trans        &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT  &kp Z   &kp X   &kp C      &kp V         &trans     &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &none   &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp LEFT_COMMAND    &trans  &trans  &trans  &trans &none
+                        &none   &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp LEFT_COMMAND    &trans  &trans  &trans  &trans  &none
             >;
         };
 
@@ -420,11 +421,11 @@
 
         nav_layer {
             bindings = <
-&trans  &trans  &trans  &trans       &trans           &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LC(E)    &trans           &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LC(TAB)  &kp LC(LS(TAB))  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans       &kp LG(TAB)      &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &none   &trans       &trans           &trans  &trans    &trans  &trans  &trans  &trans  &none
+&trans  &trans  &trans       &trans                     &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans       &kp LC(E)                  &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LC(TAB)  &kp LS(LG(RIGHT_BRACKET))  &kp LS(LG(LEFT_BRACKET))  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans       &trans                     &kp LG(TAB)               &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &none        &trans                     &trans                    &trans  &trans    &trans  &trans  &trans  &trans  &none
             >;
         };
     };
