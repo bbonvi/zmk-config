@@ -482,11 +482,11 @@
 
         cmdtab {
             bindings = <
-&trans  &trans           &trans       &trans   &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans       &trans   &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(LC(TAB))  &kp LC(TAB)  &trans   &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans       &kp TAB  &kp LS(TAB)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans       &trans   &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans   &trans   &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans   &trans   &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(TAB)  &kp TAB  &trans   &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans   &kp TAB  &kp LS(TAB)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                     &trans   &trans   &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
