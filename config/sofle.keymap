@@ -213,6 +213,32 @@
 
             label = "CMDTAB";
         };
+
+        navlayer_ctrltab: navlayer_ctrltab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&to 7>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&to 0>;
+
+            label = "NAVLAYER_CTRLTAB";
+        };
+
+        ctrltab: ctrltab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp TAB &to 8>;
+
+            label = "CTRLTAB";
+        };
     };
 
     behaviors {
@@ -446,21 +472,21 @@
 
         nav_layer {
             bindings = <
-&trans  &trans  &trans       &trans                     &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LC(W)    &kp LC(E)                  &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LC(TAB)  &kp LS(LG(RIGHT_BRACKET))  &kp LS(LG(LEFT_BRACKET))  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans       &trans                     &cmdtab                   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &none        &trans                     &trans                    &trans  &trans    &trans  &trans  &trans  &trans  &none
+&trans  &trans  &trans     &trans                     &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LC(W)  &kp LC(E)                  &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &ctrltab   &kp LS(LG(RIGHT_BRACKET))  &kp LS(LG(LEFT_BRACKET))  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &cmdtab                    &cmdtab                   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &none      &trans                     &trans                    &trans  &trans    &trans  &trans  &trans  &trans  &none
             >;
         };
 
         cmdtab {
             bindings = <
-&trans  &trans  &trans  &trans       &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans       &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans       &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LS(TAB)  &kp TAB  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans       &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans           &trans   &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans           &trans   &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(LC(TAB))  &kp LS(LC(TAB))  &trans   &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans           &kp TAB  &kp LG(TAB)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans           &trans   &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
