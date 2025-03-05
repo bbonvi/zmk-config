@@ -294,10 +294,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <70>;
+            require-prior-idle-ms = <80>;
             hold-trigger-key-positions = <18 19 20 21 22 30 31 32 33 34 44 45 46 47 48 23 35 49 1 2 3 4 5 12>;
             hold-trigger-on-release;
         };
@@ -308,10 +308,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <110>;
+            require-prior-idle-ms = <80>;
             hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41 12 24 36>;
             hold-trigger-on-release;
         };
@@ -456,11 +456,11 @@
 
         cmdtab {
             bindings = <
-&trans  &trans  &trans  &trans  &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &kp TAB  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LS(TAB)  &kp TAB  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans       &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
