@@ -155,6 +155,15 @@
             require-prior-idle-ms = <70>;
             layers = <0>;
         };
+
+        cmdtab {
+            bindings = <&cmdtab>;
+            key-positions = <54 40>;
+            layers = <0 7>;
+            require-prior-idle-ms = <1>;
+            slow-release;
+            timeout-ms = <600>;
+        };
     };
 
     macros {
@@ -187,6 +196,19 @@
             label = "LAYOUT_LAYER_MACRO";
             wait-ms = <5>;
             tap-ms = <5>;
+        };
+
+        cmdtab: cmdtab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_release>,
+                <&kp LEFT_GUI>,
+                <&macro_press>;
+
+            label = "CMDTAB";
         };
     };
 
@@ -424,8 +446,18 @@
 &trans  &trans  &trans       &trans                     &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LC(W)    &kp LC(E)                  &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LC(TAB)  &kp LS(LG(RIGHT_BRACKET))  &kp LS(LG(LEFT_BRACKET))  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans       &trans                     &kp LG(TAB)               &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans       &trans                     &trans                    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &none        &trans                     &trans                    &trans  &trans    &trans  &trans  &trans  &trans  &none
+            >;
+        };
+
+        cmdtab {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp TAB  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
