@@ -414,11 +414,11 @@
 
         gaming_layer {
             bindings = <
-&trans          &trans  &trans   &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
-&trans          &trans  &trans   &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
-&lt 4 CAPSLOCK  &trans  &trans   &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
-&kp LEFT_SHIFT  &kp Z   &kp X    &kp C      &kp V         &trans     &to 0               &trans  &trans  &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                        &kp F16  &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp LEFT_COMMAND    &trans  &trans  &trans  &trans     &none
+&trans          &trans  &trans        &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
+&trans          &trans  &trans        &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
+&lt 4 CAPSLOCK  &trans  &trans        &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
+&kp LEFT_SHIFT  &kp Z   &kp X         &kp C      &kp V         &trans     &to 0               &trans  &trans  &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                        &kp CAPSLOCK  &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp LEFT_COMMAND    &trans  &trans  &trans  &trans     &none
             >;
         };
 
@@ -493,4 +493,3 @@
         };
     };
 };
-
