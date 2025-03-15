@@ -234,10 +234,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_tap>,
+                <&to 8>,
                 <&macro_press>,
                 <&kp LCTRL>,
                 <&macro_tap>,
-                <&kp TAB &to 8>;
+                <&kp TAB>;
 
             label = "CTRLTAB";
         };
@@ -474,11 +476,11 @@
 
         nav_layer {
             bindings = <
-&trans  &trans  &trans       &trans                     &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LC(W)    &kp LC(E)                  &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LC(TAB)  &kp LS(LG(RIGHT_BRACKET))  &kp LS(LG(LEFT_BRACKET))  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans       &cmdtab                    &cmdtab                   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &none        &trans                     &trans                    &trans  &trans    &trans  &trans  &trans  &trans  &none
+&trans  &trans    &trans     &trans                     &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &kp LC(W)  &kp LC(E)                  &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &ctrltab  &ctrltab   &kp LS(LG(RIGHT_BRACKET))  &kp LS(LG(LEFT_BRACKET))  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans     &cmdtab                    &cmdtab                   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                  &none      &trans                     &trans                    &trans  &trans    &trans  &trans  &trans  &trans  &none
             >;
         };
 
@@ -493,3 +495,4 @@
         };
     };
 };
+
