@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt { tapping-term-ms = <150>; };
 
@@ -243,6 +244,20 @@
 
             label = "CTRLTAB";
         };
+
+        pc_env: next_env {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 1>;
+            label = "NEXT_ENV";
+        };
+
+        mac_env: mac_env {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "MAC_ENV";
+        };
     };
 
     behaviors {
@@ -399,6 +414,20 @@
             hold-trigger-key-positions = <29 28 27 26>;
             hold-trigger-on-release;
         };
+
+        mac_env_bhv: mac_env_bhv {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MAC_ENV_BHV";
+            #binding-cells = <0>;
+            bindings = <&none>, <&mac_env_bhv>;
+        };
+
+        pc_env_bhv: pc_env_bhv {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PC_ENV_BHV";
+            #binding-cells = <0>;
+            bindings = <&none>, <&pc_env_bhv>;
+        };
     };
 
     keymap {
@@ -476,11 +505,11 @@
 
         nav_layer {
             bindings = <
-&trans  &trans    &trans     &trans                     &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &kp LC(W)  &kp LC(E)                  &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &ctrltab  &ctrltab   &kp LS(LG(RIGHT_BRACKET))  &kp LS(LG(LEFT_BRACKET))  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans     &cmdtab                    &cmdtab                   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                  &none      &trans                     &trans                    &trans  &trans    &trans  &trans  &trans  &trans  &none
+&trans  &trans     &trans     &trans                     &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp LC(W)  &kp LC(E)                  &trans                    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &ctrltab   &ctrltab   &kp LS(LG(RIGHT_BRACKET))  &kp LS(LG(LEFT_BRACKET))  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(A)  &trans     &cmdtab                    &cmdtab                   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                   &none      &trans                     &trans                    &trans  &trans    &trans  &trans  &trans  &trans  &none
             >;
         };
 
@@ -495,4 +524,3 @@
         };
     };
 };
-
