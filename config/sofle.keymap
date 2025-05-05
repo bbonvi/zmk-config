@@ -396,14 +396,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MAC_ENV_BHV";
             #binding-cells = <0>;
-            bindings = <&none>, <&mac_env_bhv>;
+            bindings = <&none>, <&mac_env>;
         };
 
         pc_env_bhv: pc_env_bhv {
             compatible = "zmk,behavior-tap-dance";
             label = "PC_ENV_BHV";
             #binding-cells = <0>;
-            bindings = <&none>, <&pc_env_bhv>;
+            bindings = <&none>, <&pc_env>;
         };
     };
 
