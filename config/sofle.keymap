@@ -22,7 +22,7 @@
         compatible = "zmk,combos";
 
         command_space {
-            bindings = <&kp LG(SPACE)>;
+            bindings = <&kp LA(SPACE)>;
             key-positions = <28 27>;
             timeout-ms = <30>;
             layers = <0>;
