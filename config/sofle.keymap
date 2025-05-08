@@ -171,7 +171,7 @@
                 <&to 7>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_GUI &kp LCTRL>,
+                <&kp LEFT_GUI &kp LCTRL &kp LEFT_ALT>,
                 <&macro_tap>,
                 <&to 0>;
 
