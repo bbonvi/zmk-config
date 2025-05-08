@@ -236,6 +236,20 @@
 
             label = "MAC_ENV";
         };
+
+        alttab: alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&to 8>,
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp TAB>;
+
+            label = "ALT_TAB";
+        };
     };
 
     behaviors {
@@ -484,7 +498,7 @@
         nav_layer {
             bindings = <
 &trans  &trans     &trans     &trans                     &trans                    &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &kp LG(W)  &kp LC(E)                  &kp LG(GRAVE)             &kp LG(T)                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp LG(W)  &kp LC(E)                  &alttab                   &kp LG(T)                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LC(A)  &kp LC(W)  &kp LS(LG(RIGHT_BRACKET))  &kp LS(LG(LEFT_BRACKET))  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &ctrltab   &ctrltab   &cmdtab                    &cmdtab                   &kp LC(B)  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                    &none      &trans                     &trans                    &trans     &trans    &trans  &trans  &trans  &trans  &none
@@ -493,11 +507,11 @@
 
         cmdtab {
             bindings = <
-&trans  &trans       &trans   &trans       &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans   &trans       &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans   &trans       &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(TAB)  &kp TAB  &kp LS(TAB)  &kp TAB  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                     &trans   &trans       &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans   &trans       &trans        &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans   &trans       &kp LEFT_ALT  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans   &trans       &trans        &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(TAB)  &kp TAB  &kp LS(TAB)  &kp TAB       &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                     &trans   &trans       &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
