@@ -247,6 +247,21 @@
 
             label = "ALT_TAB";
         };
+
+        layout_macro_win: layout_macro_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LA(LEFT_SHIFT)>,
+                <&macro_pause_for_release>,
+                <&macro_tap>,
+                <&kp LA(LEFT_SHIFT)>;
+
+            label = "LAYOUT_MACRO_WIN";
+            wait-ms = <5>;
+            tap-ms = <5>;
+        };
     };
 
     behaviors {
@@ -428,17 +443,17 @@
 &kp TAB         &kp Q              &kp W         &kp E             &kp R            &kp T                                       &kp Y   &kp U             &kp I                 &kp O           &kp P                   &kp LBKT
 &lt 4 ESC       &kp A              &kp S         &kp D             &kp F            &kp G                                       &kp H   &kp J             &kp K                 &kp L           &kp SEMI                &kp SQT
 &kp LEFT_SHIFT  &hml LEFT_SHIFT Z  &hml LCTRL X  &hml LEFT_ALT C   &hml LEFT_GUI V  &kp B      &trans              &pc_env_bhv  &kp N   &hmr RIGHT_GUI M  &hmr RIGHT_ALT COMMA  &hmr RCTRL DOT  &hmr RIGHT_SHIFT SLASH  &trans
-                                   &kp F16       &kp LEFT_CONTROL  &kp LEFT_ALT     &kp SPACE  &navlayer_cmdtab    &mo 2        &mo 3   &lt 4 RCTRL       &kp LCTRL             &none
+                                   &kp F16       &kp LEFT_CONTROL  &kp LEFT_ALT     &kp SPACE  &navlayer_cmdtab    &mo 2        &mo 3   &layout_macro     &kp LCTRL             &none
             >;
         };
 
         gaming_layer {
             bindings = <
-&trans          &trans  &trans        &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
-&trans          &trans  &trans        &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
-&mo 4           &trans  &trans        &trans     &trans        &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
-&kp LEFT_SHIFT  &kp Z   &kp X         &kp C      &kp V         &trans     &mac_env_bhv        &trans  &trans  &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                        &kp CAPSLOCK  &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp LEFT_COMMAND    &trans  &trans  &trans  &trans     &none
+&trans          &trans  &trans        &trans     &trans        &trans                                 &trans  &trans             &trans     &trans   &trans    &trans
+&trans          &trans  &trans        &trans     &trans        &trans                                 &trans  &trans             &trans     &trans   &trans    &trans
+&mo 4           &trans  &trans        &trans     &trans        &trans                                 &trans  &trans             &trans     &trans   &trans    &trans
+&kp LEFT_SHIFT  &kp Z   &kp X         &kp C      &kp V         &trans     &mac_env_bhv        &trans  &trans  &kp M              &kp COMMA  &kp DOT  &kp FSLH  &trans
+                        &kp CAPSLOCK  &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp LEFT_COMMAND    &trans  &trans  &layout_macro_win  &trans     &none
             >;
         };
 
