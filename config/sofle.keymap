@@ -124,7 +124,7 @@
         };
 
         lang_change_mac {
-            bindings = <&kp LC(SPACE)>;
+            bindings = <&kp GLOBE>;
             key-positions = <32 33>;
             timeout-ms = <20>;
             require-prior-idle-ms = <70>;
@@ -528,4 +528,3 @@
         };
     };
 };
-
