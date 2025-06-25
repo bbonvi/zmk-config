@@ -25,7 +25,7 @@
             bindings = <&kp LA(SPACE)>;
             key-positions = <28 27>;
             timeout-ms = <30>;
-            layers = <0>;
+            layers = <0 9>;
             require-prior-idle-ms = <70>;
         };
 
@@ -34,7 +34,7 @@
             key-positions = <31 32>;
             require-prior-idle-ms = <40>;
             timeout-ms = <35>;
-            layers = <0>;
+            layers = <0 9>;
         };
 
         caps_word {
@@ -42,7 +42,7 @@
             key-positions = <33 32 31>;
             timeout-ms = <35>;
             require-prior-idle-ms = <55>;
-            layers = <0>;
+            layers = <0 9>;
         };
 
         backspace {
@@ -72,7 +72,7 @@
             key-positions = <20 19 21>;
             timeout-ms = <40>;
             require-prior-idle-ms = <40>;
-            layers = <0 2 3 5>;
+            layers = <0 2 3 5 9>;
         };
 
         gaming__enter {
@@ -104,7 +104,7 @@
             key-positions = <38 39>;
             timeout-ms = <25>;
             require-prior-idle-ms = <50>;
-            layers = <0 5>;
+            layers = <0 5 9>;
         };
 
         paste {
@@ -112,7 +112,7 @@
             key-positions = <39 40>;
             timeout-ms = <20>;
             require-prior-idle-ms = <90>;
-            layers = <0 5>;
+            layers = <0 5 9>;
         };
 
         lang_change_windows {
