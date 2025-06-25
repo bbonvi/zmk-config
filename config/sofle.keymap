@@ -459,7 +459,7 @@
             bindings = <&mo>, <&layout_back>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <50>;
+            tapping-term-ms = <90>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <5>;
         };
