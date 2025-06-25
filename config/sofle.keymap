@@ -503,7 +503,7 @@
 &trans  &kp KP_NUMBER_7              &kp KP_NUMBER_8         &kp KP_NUMBER_9            &mkp MCLK                  &trans                        &kp HOME  &kp PG_UP                 &trans         &kp BACKSPACE  &kp DELETE  &kp F12
 &trans  &kp KP_NUMBER_4              &kp KP_N5               &kp KP_NUMBER_6            &mkp LCLK                  &mkp RCLK                     &kp LEFT  &kp DOWN                  &kp UP         &kp RIGHT      &trans      &trans
 &trans  &hml LEFT_SHIFT KP_NUMBER_1  &hml LCTRL KP_NUMBER_2  &hml LEFT_ALT KP_NUMBER_3  &hml LEFT_GUI KP_NUMBER_0  &kp KP_NUM  &trans    &trans  &kp END   &hmr RIGHT_GUI PAGE_DOWN  &kp RIGHT_ALT  &kp RCTRL      &kp RSHFT   &trans
-                                     &none                   &trans                     &trans                     &trans      &trans    &trans  &trans    &trans                    &trans         &none
+                                     &bootloader             &trans                     &trans                     &trans      &trans    &trans  &trans    &trans                    &trans         &none
             >;
         };
 
