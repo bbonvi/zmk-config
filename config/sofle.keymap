@@ -282,6 +282,20 @@
             wait-ms = <5>;
             tap-ms = <5>;
         };
+
+        layout_back_caps: layout_back_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&mo 4>,
+                <&macro_pause_for_release>,
+                <&kp LC(SPACE) &to 0>;
+
+            label = "LAYOUT_BACK_CAPS";
+            wait-ms = <5>;
+            tap-ms = <5>;
+        };
     };
 
     behaviors {
@@ -549,11 +563,11 @@
 
         layout_switch {
             bindings = <
-&trans        &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&layout_back  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans             &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans             &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&layout_back_caps  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans             &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
