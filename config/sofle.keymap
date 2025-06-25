@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt { tapping-term-ms = <150>; };
 
@@ -124,7 +125,7 @@
         };
 
         lang_change_mac {
-            bindings = <&kp GLOBE>;
+            bindings = <&kp CAPSLOCK>;
             key-positions = <32 33>;
             timeout-ms = <20>;
             require-prior-idle-ms = <70>;
@@ -528,3 +529,4 @@
         };
     };
 };
+
