@@ -483,7 +483,7 @@
 &trans          &kp SQT          &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp DOT                            &kp AMPERSAND  &kp UNDERSCORE  &kp LBKT              &kp RBKT               &kp PERCENT   &kp F12
 &trans          &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL          &kp HASH                           &kp PIPE       &kp COLON       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &kp PIPE
 &sk LEFT_SHIFT  &kp CARET        &kp FSLH       &kp ASTERISK      &kp BSLH           &trans    &trans           &trans  &kp GRAVE      &kp DOLLAR      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &trans
-                                 &none          &trans            &trans             &trans    &layout_macro    &trans  &trans         &trans          &trans                &none
+                                 &none          &trans            &trans             &trans    &layout_macro    &trans  &trans         &trans          &trans                &bootloader
             >;
         };
 
