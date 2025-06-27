@@ -463,12 +463,22 @@
         layout_back_and_to: layout_back_and_to {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYOUT_BACK_AND_TO";
-            bindings = <&mo>, <&escape_layout_switch>;
+            bindings = <&mo>, <&esc_abc>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <5>;
+            quick-tap-ms = <100>;
+        };
+
+        esc_abc: esc_abc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ESC_ABC";
+            #binding-cells = <0>;
+            bindings = <&kp F13>, <&kp ESCAPE>;
+
+            tapping-term-ms = <150>;
         };
     };
 
