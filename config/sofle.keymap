@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt { tapping-term-ms = <150>; };
 
@@ -148,22 +149,6 @@
             tap-ms = <5>;
         };
 
-        layout_layer_macro: layout_layer_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LC(SPACE) &sl 2>,
-                <&macro_wait_time 500>,
-                <&macro_pause_for_release>,
-                <&macro_tap>,
-                <&kp LC(SPACE)>;
-
-            label = "LAYOUT_LAYER_MACRO";
-            wait-ms = <5>;
-            tap-ms = <5>;
-        };
-
         navlayer_cmdtab: edit_altab_qwerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -263,26 +248,6 @@
             tap-ms = <5>;
         };
 
-        layout_switch: layout_switch {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LC(SPACE) &to 0>;
-
-            label = "LAYOUT_SWITCH";
-            wait-ms = <5>;
-            tap-ms = <5>;
-        };
-
-        layout_back: layout_back {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp F13 &to 0>;
-
-            label = "LAYOUT_BACK";
-            wait-ms = <5>;
-            tap-ms = <5>;
-        };
-
         escape_layout_switch: escape_layout_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -292,78 +257,6 @@
     };
 
     behaviors {
-        hold_tap_mod_sticky: hold_tap_mod_sticky {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_MOD_STICKY";
-            bindings = <&kp>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            hold-while-undecided;
-            hold-while-undecided-linger;
-        };
-
-        homerow_mod_left: homerow_mod_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MOD_LEFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            flavor = "hold-preferred";
-            retro-tap;
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 53 55 56 57 54>;
-            hold-trigger-on-release;
-        };
-
-        homerow_mod_right: homerow_mod_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MOD_RIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            flavor = "hold-preferred";
-            retro-tap;
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 53 54 55 56 57>;
-            hold-trigger-on-release;
-        };
-
-        homerow_mod_caps: homerow_mod_caps {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MOD_CAPS";
-            bindings = <&lt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <120>;
-            quick-tap-ms = <200>;
-            flavor = "tap-unless-interrupted";
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41>;
-        };
-
-        hold_tap: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <130>;
-            flavor = "tap-preferred";
-        };
-
-        lt_spc: lt_spc {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_SPC";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "balanced";
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <180>;
-        };
-
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
@@ -389,60 +282,6 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <50>;
             hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41 12 24 36>;
-            hold-trigger-on-release;
-        };
-
-        hml_raise: hml_raise {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML_RAISE";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            flavor = "hold-preferred";
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <160>;
-            hold-trigger-key-positions = <18 19 20 21 22 30 31 32 33 34 44 45 46 47 48 25>;
-        };
-
-        hmr_raise: hmr_raise {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMR_RAISE";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            flavor = "hold-preferred";
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <160>;
-            hold-trigger-key-positions = <13 14 15 16 17 25 26 27 28 29 37 38 39 40 41 34>;
-        };
-
-        htl: htl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HTL";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <130>;
-            flavor = "balanced";
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <70>;
-            hold-trigger-key-positions = <30 31 32 33>;
-            hold-trigger-on-release;
-        };
-
-        htr: htr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HTR";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <130>;
-            flavor = "balanced";
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <70>;
-            hold-trigger-key-positions = <29 28 27 26>;
             hold-trigger-on-release;
         };
 
