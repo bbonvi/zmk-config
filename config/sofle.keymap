@@ -25,7 +25,7 @@
             bindings = <&kp LA(SPACE)>;
             key-positions = <28 27>;
             timeout-ms = <30>;
-            layers = <0 9>;
+            layers = <0>;
             require-prior-idle-ms = <70>;
         };
 
@@ -34,7 +34,7 @@
             key-positions = <31 32>;
             require-prior-idle-ms = <40>;
             timeout-ms = <35>;
-            layers = <0 9>;
+            layers = <0>;
         };
 
         caps_word {
@@ -42,7 +42,7 @@
             key-positions = <33 32 31>;
             timeout-ms = <35>;
             require-prior-idle-ms = <55>;
-            layers = <0 9>;
+            layers = <0>;
         };
 
         backspace {
@@ -72,7 +72,7 @@
             key-positions = <20 19 21>;
             timeout-ms = <40>;
             require-prior-idle-ms = <40>;
-            layers = <0 2 3 5 9>;
+            layers = <0 2 3 5>;
         };
 
         gaming__enter {
@@ -104,7 +104,7 @@
             key-positions = <38 39>;
             timeout-ms = <25>;
             require-prior-idle-ms = <50>;
-            layers = <0 5 9>;
+            layers = <0 5>;
         };
 
         paste {
@@ -112,7 +112,7 @@
             key-positions = <39 40>;
             timeout-ms = <20>;
             require-prior-idle-ms = <90>;
-            layers = <0 5 9>;
+            layers = <0 5>;
         };
 
         lang_change_windows {
@@ -124,7 +124,7 @@
         };
 
         lang_change_mac {
-            bindings = <&layout_switch>;
+            bindings = <&kp LC(SPACE)>;
             key-positions = <32 33>;
             timeout-ms = <20>;
             require-prior-idle-ms = <70>;
@@ -266,7 +266,7 @@
         layout_switch: layout_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LC(SPACE) &to 9>;
+            bindings = <&macro_tap>, <&kp LC(SPACE) &to 0>;
 
             label = "LAYOUT_SWITCH";
             wait-ms = <5>;
@@ -281,6 +281,13 @@
             label = "LAYOUT_BACK";
             wait-ms = <5>;
             tap-ms = <5>;
+        };
+
+        escape_layout_switch: escape_layout_switch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp F13>;
+            label = "ESCAPE_LAYOUT_SWITCH";
         };
     };
 
@@ -456,7 +463,7 @@
         layout_back_and_to: layout_back_and_to {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYOUT_BACK_AND_TO";
-            bindings = <&mo>, <&layout_back>;
+            bindings = <&mo>, <&escape_layout_switch>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -470,17 +477,17 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE      &kp N1             &kp N2        &kp N3            &kp N4           &kp N5                                      &kp N6  &kp N7            &kp N8                &kp N9          &kp N0                  &kp MINUS
-&kp TAB         &kp Q              &kp W         &kp E             &kp R            &kp T                                       &kp Y   &kp U             &kp I                 &kp O           &kp P                   &kp LBKT
-&lt 4 ESC       &kp A              &kp S         &kp D             &kp F            &kp G                                       &kp H   &kp J             &kp K                 &kp L           &kp SEMI                &kp SQT
-&kp LEFT_SHIFT  &hml LEFT_SHIFT Z  &hml LCTRL X  &hml LEFT_ALT C   &hml LEFT_GUI V  &kp B      &trans              &pc_env_bhv  &kp N   &hmr RIGHT_GUI M  &hmr RIGHT_ALT COMMA  &hmr RCTRL DOT  &hmr RIGHT_SHIFT SLASH  &trans
-                                   &kp F16       &kp LEFT_CONTROL  &kp LEFT_ALT     &kp SPACE  &navlayer_cmdtab    &mo 2        &mo 3   &layout_macro     &kp LCTRL             &none
+&escape_layout_switch    &kp N1             &kp N2        &kp N3            &kp N4           &kp N5                                      &kp N6  &kp N7            &kp N8                &kp N9          &kp N0                  &kp MINUS
+&kp TAB                  &kp Q              &kp W         &kp E             &kp R            &kp T                                       &kp Y   &kp U             &kp I                 &kp O           &kp P                   &kp LBKT
+&layout_back_and_to 4 0  &kp A              &kp S         &kp D             &kp F            &kp G                                       &kp H   &kp J             &kp K                 &kp L           &kp SEMI                &kp SQT
+&kp LEFT_SHIFT           &hml LEFT_SHIFT Z  &hml LCTRL X  &hml LEFT_ALT C   &hml LEFT_GUI V  &kp B      &trans              &pc_env_bhv  &kp N   &hmr RIGHT_GUI M  &hmr RIGHT_ALT COMMA  &hmr RCTRL DOT  &hmr RIGHT_SHIFT SLASH  &trans
+                                            &kp F16       &kp LEFT_CONTROL  &kp LEFT_ALT     &kp SPACE  &navlayer_cmdtab    &mo 2        &mo 3   &layout_macro     &kp LCTRL             &none
             >;
         };
 
         gaming_layer {
             bindings = <
-&trans          &trans  &trans        &trans     &trans        &trans                                 &trans  &trans             &trans     &trans   &trans    &trans
+&kp ESCAPE      &trans  &trans        &trans     &trans        &trans                                 &trans  &trans             &trans     &trans   &trans    &trans
 &trans          &trans  &trans        &trans     &trans        &trans                                 &trans  &trans             &trans     &trans   &trans    &trans
 &mo 4           &trans  &trans        &trans     &trans        &trans                                 &trans  &trans             &trans     &trans   &trans    &trans
 &kp LEFT_SHIFT  &kp Z   &kp X         &kp C      &kp V         &trans     &mac_env_bhv        &trans  &trans  &kp M              &kp COMMA  &kp DOT  &kp FSLH  &trans
@@ -555,16 +562,6 @@
 &trans  &trans       &trans   &trans       &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LS(TAB)  &kp TAB  &kp LS(TAB)  &kp TAB  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                      &trans   &trans       &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layout_switch {
-            bindings = <
-&trans                   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans                   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&layout_back_and_to 4 0  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans                   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
