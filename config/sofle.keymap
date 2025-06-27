@@ -276,7 +276,7 @@
         layout_back: layout_back {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LC(SPACE) &to 0>;
+            bindings = <&macro_tap>, <&kp F13 &to 0>;
 
             label = "LAYOUT_BACK";
             wait-ms = <5>;
@@ -459,7 +459,7 @@
             bindings = <&mo>, <&layout_back>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <5>;
         };
