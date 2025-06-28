@@ -314,7 +314,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ESC_ABC";
             #binding-cells = <0>;
-            bindings = <&kp F13>, <&kp ESCAPE>;
+            bindings = <&kp LC(SPACE)>, <&kp ESCAPE>;
 
             tapping-term-ms = <250>;
         };
