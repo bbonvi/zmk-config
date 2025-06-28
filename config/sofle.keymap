@@ -325,11 +325,11 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE               &kp N1             &kp N2        &kp N3            &kp N4           &kp N5                                      &kp N6  &kp N7            &kp N8                &kp N9          &kp N0                  &kp MINUS
-&kp TAB                  &kp Q              &kp W         &kp E             &kp R            &kp T                                       &kp Y   &kp U             &kp I                 &kp O           &kp P                   &kp LBKT
-&layout_back_and_to 4 0  &kp A              &kp S         &kp D             &kp F            &kp G                                       &kp H   &kp J             &kp K                 &kp L           &kp SEMI                &kp SQT
-&kp LEFT_SHIFT           &hml LEFT_SHIFT Z  &hml LCTRL X  &hml LEFT_ALT C   &hml LEFT_GUI V  &kp B      &trans              &pc_env_bhv  &kp N   &hmr RIGHT_GUI M  &hmr RIGHT_ALT COMMA  &hmr RCTRL DOT  &hmr RIGHT_SHIFT SLASH  &trans
-                                            &kp F16       &kp LEFT_CONTROL  &kp LEFT_ALT     &kp SPACE  &navlayer_cmdtab    &mo 2        &mo 3   &layout_macro     &kp LCTRL             &none
+&kp ESCAPE      &kp N1             &kp N2        &kp N3            &kp N4           &kp N5                                      &kp N6  &kp N7            &kp N8                &kp N9          &kp N0                  &kp MINUS
+&kp TAB         &kp Q              &kp W         &kp E             &kp R            &kp T                                       &kp Y   &kp U             &kp I                 &kp O           &kp P                   &kp LBKT
+&lt 4 ESCAPE    &kp A              &kp S         &kp D             &kp F            &kp G                                       &kp H   &kp J             &kp K                 &kp L           &kp SEMI                &kp SQT
+&kp LEFT_SHIFT  &hml LEFT_SHIFT Z  &hml LCTRL X  &hml LEFT_ALT C   &hml LEFT_GUI V  &kp B      &trans              &pc_env_bhv  &kp N   &hmr RIGHT_GUI M  &hmr RIGHT_ALT COMMA  &hmr RCTRL DOT  &hmr RIGHT_SHIFT SLASH  &trans
+                                   &kp F16       &kp LEFT_CONTROL  &kp LEFT_ALT     &kp SPACE  &navlayer_cmdtab    &mo 2        &mo 3   &layout_macro     &kp LCTRL             &none
             >;
         };
 
