@@ -316,7 +316,7 @@
             #binding-cells = <0>;
             bindings = <&kp F13>, <&kp ESCAPE>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
         };
     };
 
