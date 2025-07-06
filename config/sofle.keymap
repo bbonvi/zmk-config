@@ -253,6 +253,14 @@
             bindings = <&kp ESCAPE &kp F13>;
             label = "ESCAPE_LAYOUT_SWITCH";
         };
+
+        kpr: press_and_release {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_tap>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "PRESS_AND_RELEASE";
+        };
     };
 
     behaviors {
@@ -395,21 +403,21 @@
 
         nav_layer {
             bindings = <
-&trans  &trans     &trans     &trans                     &trans                    &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &kp LG(W)  &kp LC(E)                  &alttab                   &kp LG(T)                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(A)  &kp LC(W)  &kp LS(LG(RIGHT_BRACKET))  &kp LS(LG(LEFT_BRACKET))  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &ctrltab   &ctrltab   &cmdtab                    &cmdtab                   &kp LC(B)  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                   &none      &trans                     &trans                    &trans     &trans    &trans  &trans  &trans  &trans  &none
+&trans  &trans      &trans     &trans                     &trans                    &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &kp LG(W)  &kpr LC(E)                 &alttab                   &kp LG(T)                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kpr LC(A)  &kp LC(W)  &kp LS(LG(RIGHT_BRACKET))  &kp LS(LG(LEFT_BRACKET))  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &ctrltab    &ctrltab   &cmdtab                    &cmdtab                   &kpr LC(B)  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                    &none      &trans                     &trans                    &trans      &trans    &trans  &trans  &trans  &trans  &none
             >;
         };
 
         cmdtab {
             bindings = <
-&trans  &trans       &trans   &trans       &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans   &trans       &kp TAB  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans   &trans       &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(TAB)  &kp TAB  &kp LS(TAB)  &kp TAB  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                     &trans   &trans       &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans   &trans   &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans   &trans   &kp TAB      &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans   &trans   &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(TAB)  &kp TAB  &kp TAB  &kp LS(TAB)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                     &trans   &trans   &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
