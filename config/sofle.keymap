@@ -413,7 +413,7 @@
             bindings = <
 &trans  &trans      &trans           &trans       &trans           &trans                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &kp LG(W)        &kpr LC(E)   &alttab          &kp LG(T)                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kpr LC(A)  &kp LC(W)        &kp LC(TAB)  &kp LS(LC(TAB))  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kpr LC(A)  &kp LC(F12)      &kp LC(TAB)  &kp LS(LC(TAB))  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &kp LG(LA(F12))  &cmdtab      &cmdtab          &kpr LC(B)  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                     &none            &trans       &trans           &trans      &trans    &trans  &trans  &trans  &trans  &none
             >;
