@@ -138,6 +138,14 @@
             require-prior-idle-ms = <80>;
             layers = <0>;
         };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <27 26>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+            layers = <0 2 4 3 7 8>;
+        };
     };
 
     macros {
@@ -334,6 +342,28 @@
 
             tapping-term-ms = <250>;
         };
+
+        hml_quick: hml_quick {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_QUICK";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            hold-trigger-key-positions = <12 1 2 3 4 5 18 20 21 22 34 47 33 32 31 30 44 45 46 19 23 35 49 48>;
+            hold-while-undecided;
+        };
+
+        hmr_quick: hmr_quick {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_QUICK";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            hold-trigger-key-positions = <17 29 41 40 39 38 37 36 24 25 12 13 14 26 27 15 16 28 6 7 8 9 10>;
+            hold-while-undecided;
+        };
     };
 
     keymap {
@@ -341,11 +371,11 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE      &kp N1             &kp N2        &kp N3            &kp N4           &kp N5                                      &kp N6  &kp N7            &kp N8                &kp N9          &kp N0                  &kp MINUS
-&kp TAB         &kp Q              &kp W         &kp E             &kp R            &kp T                                       &kp Y   &kp U             &kp I                 &kp O           &kp P                   &kp LBKT
-&lt 4 ESCAPE    &kp A              &kp S         &kp D             &kp F            &kp G                                       &kp H   &kp J             &kp K                 &kp L           &kp SEMI                &kp SQT
-&kp LEFT_SHIFT  &hml LEFT_SHIFT Z  &hml LCTRL X  &hml LEFT_ALT C   &hml LEFT_GUI V  &kp B      &trans              &pc_env_bhv  &kp N   &hmr RIGHT_GUI M  &hmr RIGHT_ALT COMMA  &hmr RCTRL DOT  &hmr RIGHT_SHIFT SLASH  &trans
-                                   &kp F16       &kp LEFT_CONTROL  &kp LEFT_ALT     &kp SPACE  &navlayer_cmdtab    &mo 2        &mo 3   &layout_macro     &kp LCTRL             &none
+&kp ESCAPE      &kp N1                   &kp N2        &kp N3            &kp N4           &kp N5                                      &kp N6  &kp N7            &kp N8                &kp N9                &kp N0                  &kp MINUS
+&kp TAB         &kp Q                    &kp W         &kp E             &kp R            &kp T                                       &kp Y   &kp U             &kp I                 &kp O                 &kp P                   &kp LBKT
+&lt 4 ESCAPE    &kp A                    &kp S         &kp D             &kp F            &kp G                                       &kp H   &kp J             &kp K                 &kp L                 &kp SEMI                &kp SQT
+&kp LEFT_SHIFT  &hml_quick LEFT_SHIFT Z  &hml LCTRL X  &hml LEFT_ALT C   &hml LEFT_GUI V  &kp B      &trans              &pc_env_bhv  &kp N   &hmr RIGHT_GUI M  &hmr RIGHT_ALT COMMA  &hmr_quick RCTRL DOT  &hmr RIGHT_SHIFT SLASH  &trans
+                                         &kp F16       &kp LEFT_CONTROL  &kp LEFT_ALT     &kp SPACE  &navlayer_cmdtab    &mo 2        &mo 3   &layout_macro     &kp LCTRL             &none
             >;
         };
 
@@ -411,11 +441,11 @@
 
         nav_layer {
             bindings = <
-&trans  &trans      &trans           &trans       &trans           &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &kp LG(W)        &kpr LC(E)   &alttab          &kp LG(T)                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kpr LC(A)  &kp LC(F12)      &kp LC(TAB)  &kp LS(LC(TAB))  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &kp LG(LA(F12))  &cmdtab      &cmdtab          &kpr LC(B)  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                    &none            &trans       &trans           &trans      &trans    &trans  &trans  &trans  &trans  &none
+&trans  &trans     &trans           &trans       &trans           &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp TAB          &kpr LC(E)   &alttab          &kp LG(T)                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mo 4      &kp LC(F12)      &kp LC(TAB)  &kp LS(LC(TAB))  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(A)  &kp LG(LA(F12))  &cmdtab      &cmdtab          &kpr LC(B)  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                   &none            &trans       &trans           &trans      &trans    &trans  &trans  &trans  &trans  &none
             >;
         };
 
