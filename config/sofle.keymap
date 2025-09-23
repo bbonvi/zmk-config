@@ -389,11 +389,11 @@
 
         sym_layer {
             bindings = <
-&kp GRAVE       &kp F1           &kp F2         &kp F3            &kp F4             &kp F5                             &kp F6         &kp F7          &kp F8                &kp F9                 &kp F10       &kp F11
-&trans          &kp SQT          &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp DOT                            &kp AMPERSAND  &kp UNDERSCORE  &kp LBKT              &kp RBKT               &kp PERCENT   &kp F12
-&trans          &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL          &kp HASH                           &kp PIPE       &kp COLON       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &kp LS(LA(LC(LGUI)))
-&sk LEFT_SHIFT  &kp CARET        &kp FSLH       &kp ASTERISK      &kp BSLH           &trans    &trans           &trans  &kp GRAVE      &kp DOLLAR      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &trans
-                                 &none          &trans            &trans             &trans    &layout_macro    &trans  &trans         &trans          &trans                &bootloader
+&kp GRAVE       &kp F1           &kp F2         &kp F3            &kp F4             &kp F5                               &kp F6         &kp F7          &kp F8                &kp F9                 &kp F10       &kp F11
+&trans          &kp SQT          &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp TILDE                            &kp AMPERSAND  &kp UNDERSCORE  &kp LBKT              &kp RBKT               &kp PERCENT   &kp F12
+&trans          &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL          &kp HASH                             &kp PIPE       &kp COLON       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &kp LS(LA(LC(LGUI)))
+&sk LEFT_SHIFT  &kp CARET        &kp FSLH       &kp ASTERISK      &kp BSLH           &kp PERIOD  &trans           &trans  &kp GRAVE      &kp DOLLAR      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &trans
+                                 &none          &trans            &trans             &trans      &layout_macro    &trans  &trans         &trans          &trans                &bootloader
             >;
         };
 
