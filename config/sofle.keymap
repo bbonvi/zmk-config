@@ -439,11 +439,11 @@
 
         func_layer {
             bindings = <
-&trans  &trans      &trans           &trans       &trans           &trans                        &trans                &trans             &trans            &trans           &trans  &trans
-&trans  &trans      &kp LG(LA(F12))  &kpr LC(E)   &mkp MCLK        &mkp RCLK                     &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp K_MUTE        &kp C_VOLUME_UP  &trans  &trans
-&trans  &kp ESCAPE  &kp TAB          &kp LC(TAB)  &kp LS(LC(TAB))  &mkp LCLK                     &kp C_BRIGHTNESS_DEC  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &trans  &trans
-&trans  &kp LC(A)   &kp LC(F11)      &kp LC(F12)  &kp LG(TAB)      &kpr LC(B)  &trans    &trans  &trans                &trans             &trans            &trans           &trans  &trans
-                    &none            &trans       &trans           &trans      &trans    &trans  &trans                &trans             &trans            &none
+&trans  &trans                         &trans           &trans       &trans           &trans                        &trans                &trans             &trans            &trans           &trans  &trans
+&trans  &trans                         &kp LG(LA(F12))  &kpr LC(E)   &mkp MCLK        &mkp RCLK                     &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp K_MUTE        &kp C_VOLUME_UP  &trans  &trans
+&trans  &kp ESCAPE                     &kp TAB          &kp LC(TAB)  &kp LS(LC(TAB))  &mkp LCLK                     &kp C_BRIGHTNESS_DEC  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &trans  &trans
+&trans  &hml_quick (LEFT_SHIFT) LC(A)  &kp LC(F11)      &kp LC(F12)  &kp LG(TAB)      &kpr LC(B)  &trans    &trans  &trans                &trans             &trans            &trans           &trans  &trans
+                                       &none            &trans       &trans           &trans      &trans    &trans  &trans                &trans             &trans            &none
             >;
         };
 
