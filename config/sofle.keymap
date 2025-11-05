@@ -167,10 +167,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&mo 7>,
+                <&to 7>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_GUI>;
+                <&kp LEFT_GUI &to 0>;
 
             label = "EDIT_ALTAB_QWERTY";
         };
