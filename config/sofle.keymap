@@ -142,8 +142,8 @@
         delete {
             bindings = <&kp DELETE>;
             key-positions = <20 21>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <40>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <100>;
         };
     };
 
@@ -475,4 +475,3 @@
         };
     };
 };
-
