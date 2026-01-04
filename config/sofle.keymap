@@ -456,11 +456,11 @@
 
         func_layer {
             bindings = <
-&trans  &trans          &trans       &trans                    &trans              &trans                          &trans                &trans             &trans            &trans           &trans  &trans
-&trans  &trans          &kp LC(TAB)  &kpr_with_fallback LC(E)  &mkp MCLK           &mkp RCLK                       &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp K_MUTE        &kp C_VOLUME_UP  &trans  &trans
-&trans  &kp ESCAPE      &kp TAB      &kp LG(RIGHT_BRACE)       &kp LG(LEFT_BRACE)  &mkp LCLK                       &kp C_BRIGHTNESS_DEC  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &trans  &trans
-&trans  &kp LEFT_SHIFT  &kp LC(F11)  &kp LC(F12)               &kpr LG(TAB)        &kpr LC(F10)  &trans    &trans  &trans                &trans             &trans            &trans           &trans  &trans
-                        &none        &trans                    &trans              &trans        &trans    &trans  &trans                &trans             &trans            &none
+&trans  &trans          &trans       &trans                    &trans                   &trans                          &trans                &trans             &trans            &trans           &trans  &trans
+&trans  &trans          &kp LC(TAB)  &kpr_with_fallback LC(E)  &mkp MCLK                &mkp RCLK                       &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp K_MUTE        &kp C_VOLUME_UP  &trans  &trans
+&trans  &kp ESCAPE      &kp TAB      &kp LG(LA(LEFT_ARROW))    &kp LG(LA(RIGHT_ARROW))  &mkp LCLK                       &kp C_BRIGHTNESS_DEC  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &trans  &trans
+&trans  &kp LEFT_SHIFT  &kp LC(F11)  &kp LC(F12)               &kpr LG(TAB)             &kpr LC(F10)  &trans    &trans  &trans                &trans             &trans            &trans           &trans  &trans
+                        &none        &trans                    &trans                   &trans        &trans    &trans  &trans                &trans             &trans            &none
             >;
         };
 
