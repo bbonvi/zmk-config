@@ -8,6 +8,7 @@ import shlex
 import shutil
 import subprocess
 import sys
+from itertools import product
 from pathlib import Path
 
 import yaml
@@ -63,21 +64,45 @@ def load_build_matrix(path: Path) -> list[dict[str, str]]:
     with path.open("r", encoding="utf-8") as file:
         data = yaml.safe_load(file) or {}
 
-    entries: list[dict[str, str]] = []
+    axis_names = [
+        key
+        for key, value in data.items()
+        if key not in {"include", "exclude"} and isinstance(value, list)
+    ]
 
-    boards = data.get("board") or []
-    shields = data.get("shield") or []
-    if boards:
-        if shields:
-            for board in boards:
-                for shield in shields:
-                    entries.append({"board": board, "shield": shield})
-        else:
-            for board in boards:
-                entries.append({"board": board})
+    entries: list[dict[str, str]] = []
+    if axis_names:
+        axis_values = [data[name] for name in axis_names]
+        for values in product(*axis_values):
+            entries.append(dict(zip(axis_names, values, strict=True)))
+
+    excludes = data.get("exclude") or []
+    if excludes:
+        entries = [
+            entry
+            for entry in entries
+            if not any(
+                all(entry.get(key) == value for key, value in excluded.items())
+                for excluded in excludes
+            )
+        ]
 
     for item in data.get("include") or []:
-        entries.append(item)
+        if not axis_names:
+            entries.append(item)
+            continue
+
+        merged = False
+        for index, entry in enumerate(entries):
+            if all(entry.get(name) == item.get(name, entry.get(name)) for name in axis_names):
+                updated_entry = entry.copy()
+                updated_entry.update(item)
+                entries[index] = updated_entry
+                merged = True
+                break
+
+        if not merged:
+            entries.append(item)
 
     if not entries:
         raise SystemExit(f"no build targets found in {path}")
@@ -122,6 +147,7 @@ def filter_targets(
 
         if entry.get("shield"):
             candidates.add(entry["shield"].casefold())
+            candidates.update(part.casefold() for part in entry["shield"].split())
 
         if candidates & lowered_filters:
             filtered.append(entry)
@@ -130,6 +156,26 @@ def filter_targets(
         return filtered
 
     raise SystemExit(f"no build targets matched filters: {', '.join(filters)}")
+
+
+def prune_outputs(
+    output_dir: Path,
+    all_entries: list[dict[str, str]],
+    selected_entries: list[dict[str, str]],
+) -> None:
+    """Remove managed artifacts that do not belong to the current selection."""
+
+    selected_stems = {artifact_stem(entry) for entry in selected_entries}
+
+    for entry in all_entries:
+        stem = artifact_stem(entry)
+        if stem in selected_stems:
+            continue
+
+        for suffix in (".uf2", ".bin"):
+            artifact = output_dir / f"{stem}{suffix}"
+            if artifact.exists():
+                artifact.unlink()
 
 
 def ensure_workspace() -> None:
@@ -204,7 +250,9 @@ def main() -> int:
     ensure_workspace()
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    entries = filter_targets(load_build_matrix(BUILD_MATRIX), sys.argv[1:])
+    all_entries = load_build_matrix(BUILD_MATRIX)
+    entries = filter_targets(all_entries, sys.argv[1:])
+    prune_outputs(OUTPUT_DIR, all_entries, entries)
     for entry in entries:
         build_target(entry)
 
