@@ -448,11 +448,11 @@
 
         num_layer {
             bindings = <
-&trans  &bt BT_SEL 0    &bt BT_SEL 1          &trans            &trans            &trans                    &out OUT_TOG  &trans                    &trans        &trans     &trans  &bt BT_CLR
-&trans  &trans          &kp N1                &kp N2            &kp N3            &trans                    &kp HOME      &kp PAGE_UP               &trans        &trans     &trans  &trans
-&trans  &kp NUMBER_0    &kp N4                &kp N5            &kp N6            &trans                    &kp LEFT      &kp DOWN                  &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans  &kp LEFT_SHIFT  &hml LEFT_CONTROL N7  &hml LEFT_ALT N8  &hml LEFT_GUI N9  &trans  &trans    &trans  &kp END       &hmr RIGHT_GUI PAGE_DOWN  &trans        &trans     &trans  &trans
-                        &none                 &trans            &trans            &trans  &trans    &trans  &trans        &trans                    &trans        &none
+&trans  &bt BT_SEL 0    &bt BT_SEL 1          &trans            &trans            &trans                    &out OUT_TOG  &trans                    &trans           &trans     &trans  &bt BT_CLR
+&trans  &trans          &kp N1                &kp N2            &kp N3            &trans                    &kp HOME      &kp PAGE_UP               &kp PRINTSCREEN  &trans     &trans  &trans
+&trans  &kp NUMBER_0    &kp N4                &kp N5            &kp N6            &trans                    &kp LEFT      &kp DOWN                  &kp UP_ARROW     &kp RIGHT  &trans  &trans
+&trans  &kp LEFT_SHIFT  &hml LEFT_CONTROL N7  &hml LEFT_ALT N8  &hml LEFT_GUI N9  &trans  &trans    &trans  &kp END       &hmr RIGHT_GUI PAGE_DOWN  &kp INSERT       &trans     &trans  &trans
+                        &none                 &trans            &trans            &trans  &trans    &trans  &trans        &trans                    &trans           &none
             >;
         };
 
@@ -507,5 +507,3 @@
         };
     };
 };
-
-
