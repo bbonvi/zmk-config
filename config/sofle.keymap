@@ -218,14 +218,14 @@
         pc_env: next_env {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &out OUT_USB>;
+            bindings = <&kp LA(LS(NUMBER_2)) &to 1 &out OUT_USB>;
             label = "NEXT_ENV";
         };
 
         mac_env: mac_env {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &out OUT_BLE>;
+            bindings = <&kp LA(LS(NUMBER_1)) &to 0 &out OUT_BLE>;
             label = "MAC_ENV";
         };
 
